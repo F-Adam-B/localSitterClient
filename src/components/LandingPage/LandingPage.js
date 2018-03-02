@@ -52,11 +52,8 @@ export class LandingPage extends Component {
 						</div>
 						<div className="searchForm">
 							<form className="zipCodeForm" onSubmit={e => this.handleSearch(e)}>
-								<legend className="legend">Search for a Sitter Near You</legend>
+								<legend className="searchNearYou">Search for a Sitter Near You</legend>
 								<div>
-									<label htmlFor="zipInput" className="label">
-										I'm looking for a sitter in
-									</label>
 									<input
 										className="searchSitterByZipInput"
 										id="zipInput"
@@ -65,7 +62,8 @@ export class LandingPage extends Component {
 										placeholder="Enter Zip Code"
 										ref={input => (this.input = input)}
 									/>
-									<button className="searchButton" type="submit">
+									<br />
+									<button className="searchButton btn" type="submit">
 										Search
 									</button>
 								</div>

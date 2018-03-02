@@ -1,10 +1,8 @@
 html {
-	font-family: 120%/1.5 sans-serif;
+	font-family: 'Nunito', Sans-Serif;
 }
 
 body {
-	margin: 0;
-	padding: 0;
 	/* font-family: sans-serif; */
 	background-color: whitesmoke;
 }
@@ -12,12 +10,6 @@ body {
 ul {
 	list-style: none;
 	padding-left: 0;
-}
-
-.routerWrapper {
-	width: 55%;
-	max-width: 1000px;
-	margin: 5rem auto;
 }
 
 a {
@@ -31,9 +23,13 @@ a {
 	padding: 5px 10px;
 	text-align: center;
 	text-decoration: none;
-	display: inline-block;
+	/* display: inline-block; */
 }
 
 .button:hover {
 	background-color: rgb(65, 100, 65);
+}
+
+legend {
+	font-size: 20px;
 }

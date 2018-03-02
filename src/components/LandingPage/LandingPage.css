@@ -1,108 +1,26 @@
-.landingPageContainer {
-	display: flex;
-	flex-direction: column;
-	min-height: 85vh;
-}
-
-.Site-Content {
-	display: flex;
-}
-
 .imgWrapper {
-	max-width: 50%;
-	height: 400px;
-	margin-left: 5%;
-	margin-top: 5%;
+	height: 150px;
+	margin-bottom: 20px;
 }
 
 .babysitterImg {
-	width: 700px;
-	height: 275px;
-}
-.searchForm {
-	display: flex;
-	justify-content: center;
-}
-
-.legend {
-	margin-top: 10%;
-	margin-left: 15%;
-	font-size: 24px;
-	margin-bottom: 15px;
-}
-
-.descriptionWrapper {
-	display: flex;
-	max-width: 50%;
-	flex-direction: column;
-	margin-left: 5%;
-	margin-right: 5%;
-	margin-top: 6%;
-	text-align: center;
+	width: 100%;
+	height: 150px;
 }
 
 .description {
-	font-size: 28px;
-}
-
-.label {
-	font-size: 24px;
-	padding-right: 10px;
-	margin-top: 30px;
-}
-
-.searchSitterByZipInput {
-	height: 20px;
-}
-
-.searchButton {
-	height: 24px;
+	margin-bottom: 20px;
+	/* font-family: 'PT Sans', Sans-Serif; */
 }
 
 .zipCodeForm {
-	display: block;
 	text-align: center;
 }
 
-@media only screen and (min-width: 1600px) {
-	.babysitterImg {
-		width: 600px !important;
-		height: 300px;
-		margin-top: 20px;
-	}
-	.descriptionWrapper {
-		max-width: 50%;
-		margin-right: 0%;
-	}
-	.description {
-		font-size: 30px;
-		text-align: center;
-	}
-	.legend {
-		margin-left: 0px;
-	}
-	.searchSitterByZipInput {
-		margin-top: 10px;
-	}
-	.imgWrapper {
-		width: 600px;
-	}
+.searchNearYou {
+	margin-bottom: 20px;
 }
 
-@media only screen and (min-width: 1025px) {
-	.babysitterImg {
-		width: 500px;
-		height: 250px;
-		margin-top: 20px;
-	}
-	.description {
-		font-size: 22px;
-		text-align: left;
-	}
-	.legend {
-		margin-left: 0px;
-	}
-	.searchSitterByZipInput {
-		margin-top: 10px;
-	}
+.searchSitterByZipInput {
+	margin-bottom: 10px;
 }
