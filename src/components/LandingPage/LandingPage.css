@@ -30,17 +30,18 @@
 }
 
 @media only screen and (min-width: 460px) {
+  .imgWrapper {
+    display: flex;
+    justify-content: center;
+  }
   .babysitterImg {
     max-width: 85%;
-    margin-left: 10%;
   }
 }
 
 @media only screen and (min-width: 562px) {
   .babysitterImg {
     max-width: 450px;
-    margin-left: 15%;
-    margin-right: 15%;
   }
   .description {
     text-align: center;
@@ -50,23 +51,7 @@
 }
 
 @media only screen and (min-width: 1020px) {
-  .babysitterImg {
-    padding-left: 13%;
-  }
-  .imgWrapper {
-    align-items: center;
-  }
   .searchButton {
     width: 100px;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .imgWrapper {
-    display: flex;
-    justify-content: center;
-  }
-  .babysitterImg {
-    padding-left: 0%;
   }
 }
