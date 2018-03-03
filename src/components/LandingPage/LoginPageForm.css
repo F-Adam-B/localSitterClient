@@ -1,34 +1,45 @@
 .login-container {
-  text-align: center;
-  height: 300px;
+	text-align: center;
+	height: 300px;
 }
 
 .login-box {
-  height: 200px;
-  padding-top: 20px;
-  background-color: #e7e5e5;
+	height: 200px;
+	padding-top: 20px;
+	background-color: #e7e5e5;
 }
 .fields-container {
-  margin-top: 30px;
+	margin-top: 30px;
 }
 
 .log {
-  margin-top: 30px;
+	margin-top: 30px;
 }
 
 .signup-here {
-  color: blue;
+	color: blue;
 }
 
 @media only screen and (min-width: 562px) {
-  .login-box {
-    max-width: 80%;
-    margin: auto;
-  }
+	.login-box {
+		max-width: 80%;
+		margin: auto;
+	}
 }
 
 @media only screen and (min-width: 1020px) {
-  .login-box {
-    max-width: 40%;
-  }
+	.login-box {
+		max-width: 40%;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.login-container {
+		height: 500px;
+		padding-top: 30px;
+	}
+	.login-box {
+		max-width: 20%;
+		height: 175px;
+	}
 }

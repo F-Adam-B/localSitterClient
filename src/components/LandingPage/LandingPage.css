@@ -1,57 +1,81 @@
 .imgWrapper {
-  height: 150px;
-  margin-bottom: 20px;
-  margin-right: 10px;
-  margin-left: 10px;
+	height: 150px;
+	margin-bottom: 20px;
+	margin-right: 10px;
+	margin-left: 10px;
 }
 
 .babysitterImg {
-  width: 100%;
-  height: 150px;
+	width: 100%;
+	height: 150px;
 }
 
 .description {
-  margin-bottom: 20px;
-  margin-right: 10px;
-  margin-left: 20px;
-  /* font-family: 'PT Sans', Sans-Serif; */
+	margin-bottom: 20px;
+	margin-right: 10px;
+	margin-left: 20px;
+	/* font-family: 'PT Sans', Sans-Serif; */
 }
 
 .zipCodeForm {
-  text-align: center;
+	text-align: center;
 }
 
 .searchNearYou {
-  margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 
 .searchSitterByZipInput {
-  margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 @media only screen and (min-width: 460px) {
-  .imgWrapper {
-    display: flex;
-    justify-content: center;
-  }
-  .babysitterImg {
-    max-width: 85%;
-  }
+	.imgWrapper {
+		display: flex;
+		justify-content: center;
+	}
+	.babysitterImg {
+		max-width: 85%;
+	}
 }
 
 @media only screen and (min-width: 562px) {
-  .babysitterImg {
-    max-width: 450px;
-  }
-  .description {
-    text-align: center;
-    margin-left: 10%;
-    margin-right: 10%;
-  }
+	.babysitterImg {
+		max-width: 450px;
+	}
+	.description {
+		text-align: center;
+		margin-left: 10%;
+		margin-right: 10%;
+	}
 }
 
 @media only screen and (min-width: 1020px) {
-  .searchButton {
-    width: 100px;
-  }
+	.searchButton {
+		width: 100px;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.Site-Content {
+		display: flex;
+		margin-top: 100px;
+	}
+	.imgWrapper {
+		max-width: 50%;
+		margin-left: 10%;
+		width: 600px;
+		height: 200px;
+	}
+	.babysitterImg {
+		max-width: 600px !important;
+		height: 200px;
+	}
+	.descriptionWrapper {
+		max-width: 50%;
+		font-size: 25px;
+	}
+	.sitterResultHeader {
+		height: 100px;
+	}
 }
