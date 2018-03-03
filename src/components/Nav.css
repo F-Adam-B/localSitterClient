@@ -120,6 +120,8 @@ a {
 @media only screen and (min-width: 1200px) {
 	.nav-bar {
 		justify-content: center;
+		padding-right: 30px;
+		padding-left: 30px;
 	}
 	.sitter-finder {
 		padding-left: 0%;
