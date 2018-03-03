@@ -53,4 +53,10 @@
   .babysitterImg {
     padding-left: 13%;
   }
+  .imgWrapper {
+    align-items: center;
+  }
+  .searchButton {
+    width: 100px;
+  }
 }

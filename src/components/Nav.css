@@ -106,3 +106,13 @@ a {
     padding-left: 20px;
   }
 }
+
+@media only screen and (min-width: 1020px) {
+  .sitter-finder {
+    padding-left: 7%;
+    font-size: 45px;
+  }
+  .nav-button {
+    margin-top: 45px;
+  }
+}

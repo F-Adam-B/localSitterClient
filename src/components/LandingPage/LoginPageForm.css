@@ -6,6 +6,7 @@
 .login-box {
   height: 200px;
   padding-top: 20px;
+  background-color: #e7e5e5;
 }
 .fields-container {
   margin-top: 30px;
@@ -23,5 +24,11 @@
   .login-box {
     max-width: 80%;
     margin: auto;
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+  .login-box {
+    max-width: 40%;
   }
 }
