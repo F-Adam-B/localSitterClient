@@ -1,20 +1,27 @@
 .login-container {
-	text-align: center;
-	height: 300px;
+  text-align: center;
+  height: 300px;
 }
 
 .login-box {
-	height: 200px;
-	padding-top: 20px;
+  height: 200px;
+  padding-top: 20px;
 }
 .fields-container {
-	margin-top: 30px;
+  margin-top: 30px;
 }
 
 .log {
-	margin-top: 30px;
+  margin-top: 30px;
 }
 
 .signup-here {
-	color: blue;
+  color: blue;
+}
+
+@media only screen and (min-width: 562px) {
+  .login-box {
+    max-width: 80%;
+    margin: auto;
+  }
 }
