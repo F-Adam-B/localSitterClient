@@ -41,7 +41,11 @@ export class DashboardParent extends Component {
 				<a className="contactSitterButton">Contact Sitter</a>
 			</div>
 		));
-		return <div>{localSitterList}</div>;
+		return (
+			<ul className="parentDashSitters">
+				<li className="parentDashSittersLi">{localSitterList}</li>
+			</ul>
+		);
 	}
 }
 
