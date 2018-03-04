@@ -60,7 +60,7 @@ export class Nav extends Component {
 			parentTabs = (
 				<div className="nav-button-container">
 					<Link to="/parent/dashboard" className="nav-bttn">
-						<a className="nav-bttn parent-dashboard btn">Dashboard</a>
+						<button className="nav-bttn parent-dashboard btn">Dashboard</button>
 					</Link>
 					<Link to="/parent/notifications" className="nav-bttn">
 						<button className="nav-bttn nav-student-classes btn">Notifications</button>

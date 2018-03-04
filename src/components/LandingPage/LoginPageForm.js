@@ -39,7 +39,7 @@ export class LoginPageForm extends React.Component {
 					{error}
 
 					<fieldset className="login-box">
-						<legend>Log In</legend>
+						<legend className="loginText">Log In</legend>
 						<div className="fields-container">
 							<label htmlFor="email" />
 							<Field
