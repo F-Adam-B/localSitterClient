@@ -33,7 +33,9 @@ export class BioParentForm extends Component {
 			<div className="parentBio">
 				<form className="parentBioForm" onSubmit={e => this.handleAdd(e)}>
 					<legend>
-						<p className="parentalNeedsDescription">Please and we'll find you a sitter</p>
+						<p className="parentalNeedsDescription">
+							Please describe your needs and we'll find you a sitter
+						</p>
 					</legend>
 					<label htmlFor="dateNeeded" />
 					<input
@@ -100,9 +102,9 @@ export class BioParentForm extends Component {
 						ref={input => (this.additionalInfo = input)}
 					/>
 					<div className="parentalInputButton btn">
-						<a className="parentBioFormButton" type="submit">
+						<button className="parentBioFormButton" type="submit">
 							Submit
-						</a>
+						</button>
 					</div>
 				</form>
 			</div>
