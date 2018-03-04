@@ -73,10 +73,10 @@ export class Nav extends Component {
 			sitterTabs = (
 				<div className="nav-button-dash-notifications">
 					<Link to="/sitter/dashboard" className="nav-bttn">
-						<a className="nav-bttn sitter-dashboard">Dashboard</a>
+						<button className="nav-bttn sitter-dashboard">Dashboard</button>
 					</Link>
 					<Link to="/sitter/dashboard" className="nav-bttn">
-						<a className="nav-bttn sitter-notifications">Notifications</a>
+						<button className="nav-bttn sitter-notifications">Notifications</button>
 					</Link>
 				</div>
 			);
@@ -86,9 +86,9 @@ export class Nav extends Component {
 			logoutTab = (
 				<div className="nav-bttn log-out-tabs">
 					<Link to="/" className="nav-bttn">
-						<a className="logout btn" onClick={() => this.logOut()}>
+						<button className="logout btn" onClick={() => this.logOut()}>
 							Logout
-						</a>
+						</button>
 					</Link>
 				</div>
 			);
