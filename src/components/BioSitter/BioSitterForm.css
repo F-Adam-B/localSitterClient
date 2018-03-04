@@ -1,10 +1,37 @@
 .sitterBio {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin-top: 4%;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	margin-top: 4%;
 }
 
-.dateNeeded, .sitterLocation, .sitterRate, .sitterHeader, .zipcode, .bio, .sitterBioFormButton {
-    font-size: 18px;
+.dateNeeded,
+.sitterLocation,
+.sitterRate,
+.sitterHeader,
+.zipcode,
+.bio,
+.sitterBioFormButton {
+	font-size: 18px;
+}
+
+.sitterInput {
+	margin-bottom: 20px;
+	border: none;
+}
+
+.sitterDescription {
+	font-size: 1.1em;
+}
+
+.sitterInputButton {
+	width: 100px;
+}
+
+@media only screen and (min-width: 438px) {
+	.sitterBioForm {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
 }

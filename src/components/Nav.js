@@ -60,10 +60,10 @@ export class Nav extends Component {
 			parentTabs = (
 				<div className="nav-button-container">
 					<Link to="/parent/dashboard" className="nav-bttn">
-						<button className="nav-bttn parent-dashboard btn">Dashboard</button>
+						<a className="nav-bttn parent-dashboard btn">Dashboard</a>
 					</Link>
 					<Link to="/parent/notifications" className="nav-bttn">
-						<button className="nav-bttn nav-student-classes btn">Notifications</button>
+						<a className="nav-bttn nav-student-classes btn">Notifications</a>
 					</Link>
 				</div>
 			);
@@ -71,12 +71,12 @@ export class Nav extends Component {
 
 		if (this.props.currentView === 'sitter') {
 			sitterTabs = (
-				<div className="nav-button">
+				<div className="nav-button-dash-notifications">
 					<Link to="/sitter/dashboard" className="nav-bttn">
-						<button className="nav-bttn sitter-dashboard">Dashboard</button>
+						<a className="nav-bttn sitter-dashboard">Dashboard</a>
 					</Link>
 					<Link to="/sitter/dashboard" className="nav-bttn">
-						<button className="nav-bttn sitter-notifications">Notifications</button>
+						<a className="nav-bttn sitter-notifications">Notifications</a>
 					</Link>
 				</div>
 			);
@@ -86,9 +86,9 @@ export class Nav extends Component {
 			logoutTab = (
 				<div className="nav-bttn log-out-tabs">
 					<Link to="/" className="nav-bttn">
-						<button className="logout btn" onClick={() => this.logOut()}>
+						<a className="logout btn" onClick={() => this.logOut()}>
 							Logout
-						</button>
+						</a>
 					</Link>
 				</div>
 			);
