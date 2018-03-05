@@ -23,7 +23,7 @@ ul {
 	padding: 0;
 }
 
-li {
+.footerLi {
 	line-height: 30px;
 	font-size: 0.75em;
 	font-weight: 100;

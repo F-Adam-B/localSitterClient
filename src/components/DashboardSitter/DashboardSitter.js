@@ -28,30 +28,30 @@ export class DashboardSitter extends Component {
 		let localParentList;
 		localParentList = this.props.localParents.map((item, index) => (
 			<div key={index}>
-				<ul>
-					<li className="parentFirstName">
+				<ul className="sitterDashParentsResultsUl">
+					<li className="parentFirstName sitterDashParentResult">
 						<b>Name:</b> {item.parentUserID.firstName}
 					</li>
-					<li className="parentLocation">
+					<li className="parentLocation sitterDashParentResult">
 						<b>Location:</b> {item.location}
 					</li>
-					<li className="ageOfChild">
+					<li className="ageOfChild sitterDashParentResult">
 						<b>Child Age:</b> {item.ageOfChild}
 					</li>
-					<Moment className="dateNeeded" format="MM/DD/YYYY">
+					<Moment className="dateNeeded sitterDashParentResult" format="MM/DD/YYYY">
 						<li>
-							{' '}
 							<b>Date Needed:</b> {item.dateNeeded}
 						</li>
 					</Moment>
-					<li className="startTime">
+					<li className="startTime sitterDashParentResult">
 						<b>Start Time:</b> {item.startTime}
 					</li>
-					<li className="endTime">
+					<li className="endTime sitterDashParentResult">
 						<b>End Time:</b> {item.endTime}
 					</li>
-					<li className="additionalInfo">
-						<b>Additional Info:</b> {item.additionalInfo}
+					<li className="additionalInfo sitterDashParentResult">
+						<b>Additional Info:</b>
+						<br /> {item.additionalInfo}
 					</li>
 				</ul>
 				<a className="contactParentButton" href="#">

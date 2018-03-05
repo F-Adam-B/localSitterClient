@@ -22,7 +22,9 @@
 }
 
 .sign-up-to-contact {
-	text-decoration-color: blue;
+	color: blue !important;
+	margin-right: 5px;
+	margin-left: 5px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -32,6 +34,9 @@
 	}
 	.individualSitter {
 		margin-right: 10px;
+	}
+	.landingSitterResults {
+		max-width: 200px;
 	}
 }
 

@@ -15,7 +15,7 @@ export class SearchResults extends Component {
 		sitterList = this.props.result.map((item, index) => {
 			return (
 				<div key={index}>
-					<ul>
+					<ul className="landingSitterResults">
 						<li className="sitterFirstName">Name: {item.sitterUserID.firstName}</li>
 						<li className="sitterLocation">Location: {item.location}</li>
 						{/* <Moment className="availability" format='MM/DD/YYYY'><li className="dateAvailable">Date Available: {item.dateAvailable}</li></Moment > */}

@@ -1,6 +1,20 @@
+.sitterDashParentResult {
+	line-height: 30px;
+}
+
+.contactParentButton {
+	color: blue;
+}
+
 @media only screen and (min-width: 600px) {
-	.sitterDashParents {
+	.sitterDashParentLi {
 		display: flex;
 		flex-wrap: wrap;
+	}
+}
+
+@media only screen and (min-width: 1020px) {
+	.sitterDashParentLi {
+		display: flex;
 	}
 }

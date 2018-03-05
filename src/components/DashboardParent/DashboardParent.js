@@ -34,17 +34,22 @@ export class DashboardParent extends Component {
 					<li className="sitterLocation">
 						<b>Location:</b> {item.location}
 					</li>
-					<Moment className="dateAvailable" format="MM/DD/YYYY">
-						<li className="dateAvailable">
-							<b>Date Available:</b> {item.dateAvailable}
-						</li>
-					</Moment>
+					<li>
+						{' '}
+						<b>Date Available:</b>
+						<Moment className="dateAvailable" format="MM/DD/YYYY">
+							<li className="dateAvailable">
+								<b>Date Available:</b> {item.dateAvailable}
+							</li>
+						</Moment>
+					</li>
 					<li className="sitterRate">
 						<b>Rate:</b> {item.rate}{' '}
 					</li>
 					<li className="sitterHeader"> {item.sitterHeader}</li>
 					<li className="individualSitter">
-						<b>Bio:</b> {item.bio}
+						<b>Bio:</b>
+						<br /> {item.bio}
 					</li>
 					<li className="yearsExperience">
 						<b>Years Experience:</b> {item.yearsExperience}

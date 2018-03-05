@@ -86,14 +86,12 @@ export class Nav extends Component {
 
 		if (this.props.currentView === 'parent' || this.props.currentView === 'sitter') {
 			logoutTab = (
-				<div className="nav-button-container">
-					<div className="nav-bttn log-out-tabs">
-						<Link to="/" className="nav-bttn">
-							<button className="logout btn" onClick={() => this.logOut()}>
-								Logout
-							</button>
-						</Link>
-					</div>
+				<div className="nav-bttn log-out-tabs">
+					<Link to="/" className="nav-bttn">
+						<button className="logout btn" onClick={() => this.logOut()}>
+							Logout
+						</button>
+					</Link>
 				</div>
 			);
 		}
