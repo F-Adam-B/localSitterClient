@@ -39,7 +39,7 @@ export class BioParentForm extends Component {
 					</legend>
 					<label htmlFor="dateNeeded" />
 					<input
-						className="createBioInput parentInput"
+						className="dateNeeded parentInput"
 						type="date"
 						name="dateNeeded"
 						id="dateNeeded"

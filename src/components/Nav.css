@@ -20,7 +20,7 @@ img {
 
 .nav-bttn,
 .log {
-	width: 70px;
+	width: 80px;
 	height: 35px;
 }
 
@@ -127,6 +127,11 @@ a {
 	.logo {
 		padding-left: 20px;
 	}
+	.parentDashSittersLi {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
 }
 
 @media only screen and (min-width: 1020px) {
@@ -144,8 +149,9 @@ a {
 		margin-top: 50px;
 	}
 	.logout {
+		position: relative;
 		padding-top: 4%;
-		width: 100px;
+		width: 80px;
 		margin-left: 43px;
 		margin-top: 50px;
 	}
@@ -153,6 +159,10 @@ a {
 		position: static;
 		padding-top: 20px;
 		margin-left: 0%;
+		margin-right: 0px;
+	}
+	.parentDashSittersLi {
+		display: flex;
 	}
 }
 

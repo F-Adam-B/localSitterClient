@@ -28,17 +28,31 @@ export class DashboardParent extends Component {
 		localSitterList = this.props.localSitters.map((item, index) => (
 			<div key={index}>
 				<ul className="parentDashSitters">
-					<li className="sitterFirstName">Name: {item.sitterUserID.firstName}</li>
-					<li className="sitterLocation">Location: {item.location}</li>
+					<li className="sitterFirstName">
+						<b>Name:</b> {item.sitterUserID.firstName}
+					</li>
+					<li className="sitterLocation">
+						<b>Location:</b> {item.location}
+					</li>
 					<Moment className="dateAvailable" format="MM/DD/YYYY">
-						<li className="dateAvailable">Date Available: {item.dateAvailable}</li>
+						<li className="dateAvailable">
+							<b>Date Available:</b> {item.dateAvailable}
+						</li>
 					</Moment>
-					<li className="sitterRate">Rate: {item.rate} </li>
+					<li className="sitterRate">
+						<b>Rate:</b> {item.rate}{' '}
+					</li>
 					<li className="sitterHeader"> {item.sitterHeader}</li>
-					<li className="individualSitter">Bio: {item.bio}</li>
-					<li className="yearsExperience">Years Experience: {item.yearsExperience}</li>
+					<li className="individualSitter">
+						<b>Bio:</b> {item.bio}
+					</li>
+					<li className="yearsExperience">
+						<b>Years Experience:</b> {item.yearsExperience}
+					</li>
 				</ul>
-				<a className="contactSitterButton">Contact Sitter</a>
+				<a className="contactSitterButton" href="#">
+					Contact Sitter /in dev/
+				</a>
 			</div>
 		));
 		return (

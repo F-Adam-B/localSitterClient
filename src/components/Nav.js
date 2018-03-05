@@ -71,25 +71,29 @@ export class Nav extends Component {
 
 		if (this.props.currentView === 'sitter') {
 			sitterTabs = (
-				<div className="nav-button-dash-notifications">
-					<Link to="/sitter/dashboard" className="nav-bttn">
-						<button className="nav-bttn sitter-dashboard">Dashboard</button>
-					</Link>
-					<Link to="/sitter/dashboard" className="nav-bttn">
-						<button className="nav-bttn sitter-notifications">Notifications</button>
-					</Link>
+				<div className="nav-button-container">
+					<div className="nav-button-dash-notifications">
+						<Link to="/sitter/dashboard" className="nav-bttn">
+							<button className="nav-bttn sitter-dashboard">Dashboard</button>
+						</Link>
+						<Link to="/sitter/dashboard" className="nav-bttn">
+							<button className="nav-bttn sitter-notifications">Notifications</button>
+						</Link>
+					</div>
 				</div>
 			);
 		}
 
 		if (this.props.currentView === 'parent' || this.props.currentView === 'sitter') {
 			logoutTab = (
-				<div className="nav-bttn log-out-tabs">
-					<Link to="/" className="nav-bttn">
-						<button className="logout btn" onClick={() => this.logOut()}>
-							Logout
-						</button>
-					</Link>
+				<div className="nav-button-container">
+					<div className="nav-bttn log-out-tabs">
+						<Link to="/" className="nav-bttn">
+							<button className="logout btn" onClick={() => this.logOut()}>
+								Logout
+							</button>
+						</Link>
+					</div>
 				</div>
 			);
 		}

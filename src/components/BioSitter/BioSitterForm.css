@@ -28,6 +28,10 @@
 	width: 100px;
 }
 
+.dateAvailable {
+	font-size: 17px;
+}
+
 @media only screen and (min-width: 438px) {
 	.sitterBioForm {
 		display: flex;

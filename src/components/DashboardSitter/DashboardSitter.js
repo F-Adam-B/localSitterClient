@@ -29,17 +29,34 @@ export class DashboardSitter extends Component {
 		localParentList = this.props.localParents.map((item, index) => (
 			<div key={index}>
 				<ul>
-					<li className="parentFirstName">Name: {item.parentUserID.firstName}</li>
-					<li className="parentLocation">Location: {item.location}</li>
-					<li className="ageOfChild">Child Age: {item.ageOfChild}</li>
+					<li className="parentFirstName">
+						<b>Name:</b> {item.parentUserID.firstName}
+					</li>
+					<li className="parentLocation">
+						<b>Location:</b> {item.location}
+					</li>
+					<li className="ageOfChild">
+						<b>Child Age:</b> {item.ageOfChild}
+					</li>
 					<Moment className="dateNeeded" format="MM/DD/YYYY">
-						<li> Date Needed: {item.dateNeeded}</li>
+						<li>
+							{' '}
+							<b>Date Needed:</b> {item.dateNeeded}
+						</li>
 					</Moment>
-					<li className="startTime">Start Time: {item.startTime}</li>
-					<li className="endTime">End Time: {item.endTime}</li>
-					<li className="additionalInfo">Additional Info: {item.additionalInfo}</li>
+					<li className="startTime">
+						<b>Start Time:</b> {item.startTime}
+					</li>
+					<li className="endTime">
+						<b>End Time:</b> {item.endTime}
+					</li>
+					<li className="additionalInfo">
+						<b>Additional Info:</b> {item.additionalInfo}
+					</li>
 				</ul>
-				<a className="contactParentButton">Contact Parent</a>
+				<a className="contactParentButton" href="#">
+					Contact Parent
+				</a>
 			</div>
 		));
 		return (
