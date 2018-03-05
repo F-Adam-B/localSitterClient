@@ -91,7 +91,7 @@ export class BioSitterForm extends Component {
 					/>
 					<label htmlFor="bio" />
 					<input
-						className="bio sitterInput"
+						className="sitterAdditionalInfoInput sitterInput"
 						type="text"
 						name="bio"
 						id="bio"
@@ -99,9 +99,9 @@ export class BioSitterForm extends Component {
 						ref={input => (this.bio = input)}
 					/>
 					<div className="sitterInputButton">
-						<a className="sitterBioFormButton" type="submit">
+						<button className="sitterBioFormButton" type="submit">
 							Submit
-						</a>
+						</button>
 					</div>
 				</form>
 			</div>

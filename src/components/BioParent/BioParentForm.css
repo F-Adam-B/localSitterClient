@@ -15,6 +15,10 @@
 
 #additionalInfo {
 	height: 100px;
+	vertical-align: top;
+	text-align: left;
+	white-space: nowrap;
+	overflow: hidden;
 }
 .parentInput {
 	margin-bottom: 20px;

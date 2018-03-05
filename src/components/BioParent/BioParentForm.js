@@ -101,7 +101,7 @@ export class BioParentForm extends Component {
 						placeholder="Additional information"
 						ref={input => (this.additionalInfo = input)}
 					/>
-					<div className="parentalInputButton btn">
+					<div className="parentalInputButton">
 						<button className="parentBioFormButton" type="submit">
 							Submit
 						</button>

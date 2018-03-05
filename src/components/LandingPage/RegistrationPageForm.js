@@ -82,7 +82,13 @@ export class RegistrationPageForm extends React.Component {
 							/>
 
 							<div className="roleSignupField">
-								<Field component="select" type="role" name="role" validate={[required]}>
+								<Field
+									className="dropdownRegistration"
+									component="select"
+									type="role"
+									name="role"
+									validate={[required]}
+								>
 									<option value="Parent">Parent</option>
 									<option value="Sitter">Sitter</option>
 								</Field>

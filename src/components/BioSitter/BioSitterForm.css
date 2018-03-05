@@ -32,6 +32,18 @@
 	font-size: 17px;
 }
 
+.hoursAvailable {
+	font-size: 18px;
+}
+
+.sitterAdditionalInfoInput {
+	height: 100px;
+	vertical-align: top;
+	text-align: left;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
 @media only screen and (min-width: 438px) {
 	.sitterBioForm {
 		display: flex;
