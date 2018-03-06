@@ -29,11 +29,16 @@
 }
 
 .demoLoginWrapper {
-	border: black solid 1px;
+	border: 1px solid #000;
+	margin: 10px auto;
+	padding-left: 4px;
+	padding-right: 4px;
+	background: white;
+	max-width: 200px;
 }
 
-.log btn {
-	margin-top: 50px;
+.log {
+	margin-top: 64px;
 }
 
 @media only screen and (min-width: 562px) {
@@ -56,6 +61,5 @@
 	}
 	.login-box {
 		max-width: 20%;
-		height: 175px;
 	}
 }

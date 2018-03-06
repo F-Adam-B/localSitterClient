@@ -61,7 +61,9 @@ export class LoginPageForm extends React.Component {
 							/>
 							<div className="demoLoginWrapper">
 								<p className="demoLoginCredentials">
-									<span>Try a free demo. </span>
+									<span>
+										Try a free demo. <br />
+									</span>
 									Login as sitter:<br /> email: SitterDemo@email.com - password: Password
 								</p>
 								<p className="demoLoginCredentials">

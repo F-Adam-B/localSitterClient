@@ -39,7 +39,7 @@
 	height: 35px;
 }
 .sign {
-	width: 100px;
+	width: 100px !important;
 }
 .no-account {
 	margin-bottom: 20px;
