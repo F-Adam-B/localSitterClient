@@ -27,7 +27,7 @@ export class DashboardSitter extends Component {
 		}
 		let localParentList;
 		localParentList = this.props.localParents.map((item, index) => (
-			<div key={index}>
+			<div className="sitterDashParentResultFields" key={index}>
 				<ul className="sitterDashParentsResultsUl">
 					<li className="parentFirstName sitterDashParentResult">
 						<b>Name:</b> {item.parentUserID.firstName}

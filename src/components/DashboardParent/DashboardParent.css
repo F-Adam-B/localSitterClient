@@ -1,6 +1,10 @@
 .contactSitterButton {
-	color: blue;
+	color: blue !important;
 }
+.parentDashSitters {
+	margin-bottom: 15px;
+}
+
 @media only screen and (min-width: 600px) {
 	.parentDashSitters {
 		display: flex;

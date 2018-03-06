@@ -16,13 +16,23 @@ export class SearchResults extends Component {
 			return (
 				<div key={index}>
 					<ul className="landingSitterResults">
-						<li className="sitterFirstName">Name: {item.sitterUserID.firstName}</li>
-						<li className="sitterLocation">Location: {item.location}</li>
+						<li className="sitterFirstName">
+							<b>Name:</b> {item.sitterUserID.firstName}
+						</li>
+						<li className="sitterLocation">
+							<b>Location:</b> {item.location}
+						</li>
 						{/* <Moment className="availability" format='MM/DD/YYYY'><li className="dateAvailable">Date Available: {item.dateAvailable}</li></Moment > */}
-						<li className="sitterRate">Rate: {item.rate} </li>
+						<li className="sitterRate">
+							<b>Rate:</b> {item.rate}{' '}
+						</li>
 						<li className="sitterHeader"> {item.sitterHeader}</li>
-						<li className="individualSitter">Bio: {item.bio}</li>
-						<li className="yearsExperience">Years Experience: {item.yearsExperience}</li>
+						<li className="individualSitter">
+							<b>Bio:</b> {item.bio}
+						</li>
+						<li className="yearsExperience">
+							<b>Years Experience:</b> {item.yearsExperience}
+						</li>
 					</ul>
 					<p className="contactSitterLink">
 						<Link className="sign-up-link" to={'/signup'}>

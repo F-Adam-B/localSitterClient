@@ -36,7 +36,9 @@
 		margin-right: 10px;
 	}
 	.landingSitterResults {
-		max-width: 200px;
+		max-width: 300px;
+		margin-left: 5px;
+		margin-right: 5px;
 	}
 }
 
@@ -44,5 +46,8 @@
 	.sitterResultList {
 		display: flex;
 		justify-content: space-evenly;
+	}
+	.individualSitter {
+		max-width: 200px;
 	}
 }

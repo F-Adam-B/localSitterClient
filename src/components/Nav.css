@@ -143,13 +143,9 @@ a {
 		margin-top: 45px;
 		width: 100px;
 	}
-	.nav-button-container {
-		padding-top: 4%;
-		margin-right: 10px;
-		margin-top: 50px;
-	}
+
 	.logout {
-		margin-top: 100px;
+		margin-top: 106px;
 	}
 	.log-out-tabs {
 		position: static;
@@ -181,8 +177,8 @@ a {
 		padding-top: 40px;
 	}
 	.logo {
-		height: 175px;
-		width: 175px;
+		height: 150px;
+		width: 150px;
 	}
 	.nav-button {
 		padding-top: 30px;
@@ -192,5 +188,10 @@ a {
 	}
 	.footer-category {
 		font-size: 1.5em !important;
+	}
+	.nav-button-container {
+		padding-top: 4%;
+		margin-right: 10px;
+		margin-top: 50px;
 	}
 }
