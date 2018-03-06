@@ -60,10 +60,11 @@ export class LoginPageForm extends React.Component {
 								validate={[required, nonEmpty]}
 							/>
 							<p className="demoLoginCredentials">
-								Demo login as sitter: email: SitterDemo@email.com - password: Password
+								<span>Try a free demo</span>
+								Login as sitter: email: SitterDemo@email.com - password: Password
 							</p>
 							<p className="demoLoginCredentials">
-								Demo login as parent: email: ParentDemo@email.com - password: Password
+								Login as parent: email: ParentDemo@email.com - password: Password
 							</p>
 							<button className="log btn" disabled={this.props.pristine || this.props.submitting}>
 								Log in
