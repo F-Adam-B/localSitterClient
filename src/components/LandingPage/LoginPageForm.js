@@ -60,7 +60,7 @@ export class LoginPageForm extends React.Component {
 								validate={[required, nonEmpty]}
 							/>
 							<p className="demoLoginCredentials">
-								<span>Try a free demo</span>
+								<span>Try a free demo.</span>
 								Login as sitter: email: SitterDemo@email.com - password: Password
 							</p>
 							<p className="demoLoginCredentials">
