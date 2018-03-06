@@ -142,8 +142,9 @@ a {
 		margin-top: 17px;
 	}
 	.nav-button {
-		margin-top: 45px;
+		margin-top: 78px;
 		width: 100px;
+		display: flex;
 	}
 
 	.logout {

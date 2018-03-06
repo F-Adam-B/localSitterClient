@@ -63,7 +63,7 @@ export class LandingPage extends Component {
 										ref={input => (this.input = input)}
 									/>
 									<br />
-									<p>**Demo with zipcode 80204**</p>
+									<p className="zipcodeDemoText">**Demo with zipcode 80204**</p>
 									<button className="searchButton btn" type="submit">
 										Search
 									</button>

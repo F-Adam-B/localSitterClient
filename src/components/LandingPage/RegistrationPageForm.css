@@ -38,8 +38,8 @@
 .sign {
 	height: 35px;
 }
-.sign {
-	width: 100px !important;
+.signUpBtn {
+	width: 80px;
 }
 .no-account {
 	margin-bottom: 20px;

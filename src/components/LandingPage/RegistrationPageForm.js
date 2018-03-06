@@ -94,7 +94,7 @@ export class RegistrationPageForm extends React.Component {
 								</Field>
 
 								<button
-									className="sign btn"
+									className="signUpBtn btn"
 									type="submit"
 									disabled={this.props.pristine || this.props.submitting}
 								>
