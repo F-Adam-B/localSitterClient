@@ -61,8 +61,10 @@ export class DashboardSitter extends Component {
 		));
 		return (
 			<div className="sitterDashContainer">
-				<h2>Welcome {this.props.userName}</h2>
-				<h3>below are families in your area</h3>
+				<div className="sitterDashWelcome">
+					<h2>Welcome {this.props.userName}</h2>
+					<h3>below are families we found in your area</h3>
+				</div>
 				<ul className="sitterDashParents">
 					<li className="sitterDashParentLi">{localParentList}</li>
 				</ul>

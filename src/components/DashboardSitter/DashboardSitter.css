@@ -3,7 +3,15 @@
 }
 
 .contactParentButton {
-	color: blue;
+	color: blue !important;
+}
+
+.sitterDashWelcome {
+	margin: auto;
+}
+
+.sitterDashParentsResultsUl {
+	padding-bottom: 10px;
 }
 
 @media only screen and (min-width: 600px) {

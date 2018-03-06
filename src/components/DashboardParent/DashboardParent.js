@@ -62,8 +62,10 @@ export class DashboardParent extends Component {
 		));
 		return (
 			<div className="parentDashContainer">
-				<h2>Welcome {this.props.userName}</h2>
-				<h3>below are sitters in your area</h3>
+				<div className="parentDashWelcome">
+					<h2>Welcome {this.props.userName}</h2>
+					<h3>below are sitters we found in your area</h3>
+				</div>
 				<ul className="parentDashSitters">
 					<li className="parentDashSittersLi">{localSitterList}</li>
 				</ul>
@@ -74,7 +76,7 @@ export class DashboardParent extends Component {
 
 const mapStateToProps = state => ({
 	userId: state.auth.currentUser.id,
-	usersName: state.auth.currentUser.firstName,
+	userName: state.auth.currentUser.firstName,
 	createdBios: state.parents.parentalInfo,
 	location: state.auth.currentUser.zipcode,
 	localSitters: state.sitters.zipcodeSearches,

@@ -130,7 +130,7 @@ a {
 	.parentDashSittersLi {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-around;
+		justify-content: space-evenly;
 	}
 }
 
@@ -138,6 +138,8 @@ a {
 	.sitter-finder {
 		padding-left: 7%;
 		font-size: 45px;
+		padding-top: 42px;
+		margin-top: 17px;
 	}
 	.nav-button {
 		margin-top: 45px;
@@ -145,11 +147,12 @@ a {
 	}
 
 	.logout {
-		margin-top: 106px;
+		width: 79px;
+		margin-left: 90px;
 	}
 	.log-out-tabs {
 		position: static;
-		padding-top: 20px;
+		padding-top: 6px;
 		margin-left: 0%;
 		margin-right: 0px;
 	}
@@ -157,10 +160,19 @@ a {
 		display: flex;
 	}
 	.nav-button-dash-notifications {
-		margin-top: 68px;
+		display: flex;
+		margin: auto;
 	}
 	.login {
 		width: 81px;
+	}
+	.nav-button-container {
+		position: absolute;
+		width: 300px;
+	}
+
+	.nav-bttn logoutbtn {
+		padding-left: 130px;
 	}
 }
 
@@ -188,10 +200,5 @@ a {
 	}
 	.footer-category {
 		font-size: 1.5em !important;
-	}
-	.nav-button-container {
-		padding-top: 4%;
-		margin-right: 10px;
-		margin-top: 50px;
 	}
 }
