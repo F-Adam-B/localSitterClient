@@ -59,13 +59,15 @@ export class LoginPageForm extends React.Component {
 								placeholder="password"
 								validate={[required, nonEmpty]}
 							/>
-							<p className="demoLoginCredentials">
-								<span>Try a free demo.</span>
-								Login as sitter: email: SitterDemo@email.com - password: Password
-							</p>
-							<p className="demoLoginCredentials">
-								Login as parent: email: ParentDemo@email.com - password: Password
-							</p>
+							<div className="demoLoginWrapper">
+								<p className="demoLoginCredentials">
+									<span>Try a free demo. </span>
+									Login as sitter:<br /> email: SitterDemo@email.com - password: Password
+								</p>
+								<p className="demoLoginCredentials">
+									Login as parent:<br /> email: ParentDemo@email.com - password: Password
+								</p>
+							</div>
 							<button className="log btn" disabled={this.props.pristine || this.props.submitting}>
 								Log in
 							</button>
@@ -74,7 +76,7 @@ export class LoginPageForm extends React.Component {
 					<p className="no-account">
 						Don't have an account yet? Sign up
 						<Link className="signup-here-link" to={'/signup'}>
-							<span className="signup-here">Here</span>
+							<span className="signup-here"> Here</span>
 						</Link>.
 					</p>
 				</form>
