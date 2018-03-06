@@ -36,7 +36,7 @@ export class DashboardParent extends Component {
 					</li>
 					<li>
 						{' '}
-						<b>Date Available:</b>
+						<b>Date Available: </b>
 						<Moment className="dateAvailable" format="MM/DD/YYYY">
 							<li className="dateAvailable">
 								<b>Date Available:</b> {item.dateAvailable}
@@ -61,15 +61,20 @@ export class DashboardParent extends Component {
 			</div>
 		));
 		return (
-			<ul className="parentDashSitters">
-				<li className="parentDashSittersLi">{localSitterList}</li>
-			</ul>
+			<div className="parentDashContainer">
+				<h2>Welcome {this.props.userName}</h2>
+				<h3>below are sitters in your area</h3>
+				<ul className="parentDashSitters">
+					<li className="parentDashSittersLi">{localSitterList}</li>
+				</ul>
+			</div>
 		);
 	}
 }
 
 const mapStateToProps = state => ({
 	userId: state.auth.currentUser.id,
+	usersName: state.auth.currentUser.firstName,
 	createdBios: state.parents.parentalInfo,
 	location: state.auth.currentUser.zipcode,
 	localSitters: state.sitters.zipcodeSearches,

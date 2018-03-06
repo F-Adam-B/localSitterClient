@@ -60,15 +60,20 @@ export class DashboardSitter extends Component {
 			</div>
 		));
 		return (
-			<ul className="sitterDashParents">
-				<li className="sitterDashParentLi">{localParentList}</li>
-			</ul>
+			<div className="sitterDashContainer">
+				<h2>Welcome {this.props.userName}</h2>
+				<h3>below are families in your area</h3>
+				<ul className="sitterDashParents">
+					<li className="sitterDashParentLi">{localParentList}</li>
+				</ul>
+			</div>
 		);
 	}
 }
 
 const mapStateToProps = state => ({
 	userId: state.auth.currentUser.id,
+	userName: state.auth.currentUser.firstName,
 	createdBios: state.sitters.sitterBio,
 	location: state.auth.currentUser.zipcode,
 	localParents: state.parents.zipcodeSearches,
