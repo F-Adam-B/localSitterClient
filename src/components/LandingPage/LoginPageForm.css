@@ -24,6 +24,10 @@
 	text-align: center;
 }
 
+.demoLoginCredentials {
+	font-size: 10px;
+}
+
 @media only screen and (min-width: 562px) {
 	.login-box {
 		max-width: 80%;

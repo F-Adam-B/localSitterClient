@@ -26,13 +26,13 @@ export class SearchResults extends Component {
 						<li className="sitterRate">
 							<b>Rate:</b> {item.rate}{' '}
 						</li>
-						<li className="sitterHeader"> {item.sitterHeader}</li>
-						<li className="individualSitter">
-							<b>Bio:</b> {item.bio}
-						</li>
 						<li className="yearsExperience">
 							<b>Years Experience:</b> {item.yearsExperience}
 						</li>
+						<li className="sitterHeader">
+							<b>{item.sitterHeader}</b>
+						</li>
+						<li className="individualSitter">{item.bio}</li>
 					</ul>
 					<p className="contactSitterLink">
 						<Link className="sign-up-link" to={'/signup'}>
