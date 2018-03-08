@@ -5,6 +5,7 @@ import parentsReducer from './parents';
 import authReducer from './auth';
 import viewReducer from './views';
 import sittersReducer from './sitters';
+import messagesReducer from './messages';
 
 const rootReducer = combineReducers({
 	parents: parentsReducer,
@@ -12,6 +13,7 @@ const rootReducer = combineReducers({
 	view: viewReducer,
 	form: formReducer,
 	sitters: sittersReducer,
+	messages: messagesReducer,
 });
 
 export default rootReducer;

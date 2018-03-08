@@ -8,6 +8,8 @@ const initialState = {
 	error: false,
 	createdBio: [],
 	sitterBio: [],
+	sentMessages: [],
+	receivedMessages: [],
 };
 
 const sittersReducer = (state = initialState, action) => {

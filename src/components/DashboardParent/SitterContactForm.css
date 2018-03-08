@@ -1,0 +1,17 @@
+.contactFormHeader {
+	text-align: center;
+	display: inline;
+}
+
+.sitterContactForm {
+	text-align: center;
+}
+
+.textArea {
+	width: 200px;
+	height: 300px;
+}
+
+.exitContactForm {
+	float: right;
+}
