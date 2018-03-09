@@ -1,4 +1,6 @@
 import * as types from './actionType';
+import { API_BASE_URL } from './../config';
+import { normalizeResponseErrors } from './utils';
 
 // sync actions
 export const addMessageRequest = () => ({
@@ -15,8 +17,9 @@ export const addMessageSuccess = message => ({
 	message,
 });
 
-export const toggleContactForm = () => ({
+export const toggleContactForm = boolean => ({
 	type: types.TOGGLE_CONTACT_FORM,
+	boolean,
 });
 
 export const storeRecipientEmail = email => ({
@@ -25,3 +28,21 @@ export const storeRecipientEmail = email => ({
 });
 
 // async actions
+
+export const createMessage = data => (dispatch, getState) => {
+	dispatch(addMessageRequest());
+	return fetch(`${API_BASE_URL}/messages/create_message`, {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json',
+			Accept: 'application/json',
+		},
+		body: JSON.stringify(data),
+	})
+		.then(res => normalizeResponseErrors(res))
+		.then(res => res.json())
+		.then(res => dispatch(addMessageSuccess(res)))
+		.catch(err => {
+			dispatch(addMessageRequest(err));
+		});
+};

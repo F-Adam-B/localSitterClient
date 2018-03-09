@@ -1,19 +1,26 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import './SitterContactForm.css';
-import { addMessageSuccess } from '../../actions/messages';
+import './ContactForm.css';
+import * as actions from '../actions';
+import { addMessageSuccess, createMessage } from '../actions/messages';
 
-class SitterContactForm extends Component {
+class ContactForm extends Component {
+	handleClick() {
+		this.props.dispatch(actions.toggleContactForm(false));
+	}
+
 	onSubmit(values) {
 		values.preventDefault();
 		const value = {
 			subject: this.contactSitterSubjectInput.value,
 			text: this.contactSitterTextInput.value,
 			id: this.props.id,
+			email: this.props.recipientEmail,
 		};
 
-		this.props.dispatch(addMessageSuccess(value));
+		this.props.dispatch(createMessage(value));
+		this.props.dispatch(actions.toggleContactForm(false));
 		this.contactSitterSubjectInput.value = '';
 		this.contactSitterTextInput.value = '';
 	}
@@ -23,11 +30,18 @@ class SitterContactForm extends Component {
 			<div className="sitterContactFormWrapper">
 				<div className="contactFormHeader">
 					<h1>Send a message to sitter....</h1>
-					<button className="exitContactForm" src="X">
+					<button
+						className="exitContactForm"
+						type="submit"
+						onClick={() => {
+							console.log('click');
+							this.handleClick();
+						}}
+					>
 						X
 					</button>
 				</div>
-				<form className="sitterContactForm" onSubmit={e => this.onSubmit(e)}>
+				<form className="contactForm" onSubmit={e => this.onSubmit(e)}>
 					<div className="inputSubject">
 						<label className="contactSubject">Enter a subject</label>
 						<input
@@ -65,6 +79,7 @@ class SitterContactForm extends Component {
 const mapStateToProps = state => ({
 	parentName: state.auth.currentUser.firstName,
 	id: state.auth.currentUser.id,
+	recipientEmail: state.messages.recipientEmail,
 });
 
-export default connect(mapStateToProps)(SitterContactForm);
+export default connect(mapStateToProps)(ContactForm);

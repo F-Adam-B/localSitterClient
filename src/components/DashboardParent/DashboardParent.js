@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom';
 import Moment from 'react-moment';
 
 import * as actions from '../../actions';
+
 import { searchSitters } from '../../actions/sitters';
 import BioParentForm from '../BioParent/BioParentForm';
-import SitterContactForm from './SitterContactForm';
+import ContactForm from '../ContactForm';
 
 import './DashboardParent.css';
 
@@ -19,12 +20,8 @@ export class DashboardParent extends Component {
 
 	recipientEmail = email => {
 		this.props.dispatch(actions.storeRecipientEmail(email));
-		this.props.dispatch(actions.toggleContactForm());
+		this.props.dispatch(actions.toggleContactForm(true));
 	};
-
-	// toggleContactForm() {
-	// 	this.props.dispatch(actions.toggleContactForm());
-	// }
 
 	render() {
 		if (this.props.createdBios.length === 0) {
@@ -38,7 +35,7 @@ export class DashboardParent extends Component {
 		if (this.props.openContactForm === true) {
 			return (
 				<div className="contactForm">
-					<SitterContactForm />
+					<ContactForm />
 				</div>
 			);
 		}

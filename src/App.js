@@ -9,8 +9,7 @@ import BioParentForm from './components/BioParent/BioParentForm';
 import BioSitterForm from './components/BioSitter/BioSitterForm';
 import DashboardParent from './components/DashboardParent/DashboardParent';
 import DashboardSitter from './components/DashboardSitter/DashboardSitter';
-import SitterContactForm from './components/DashboardParent/SitterContactForm';
-import ContactParentForm from './components/DashboardSitter/ContactParentForm';
+
 import NotFound from './components/NotFound';
 import './index.css';
 
@@ -27,8 +26,7 @@ export class App extends Component {
 					<Route exact path="/sitter/dashboard" component={DashboardSitter} />
 					<Route exact path="/parent/parentForm" component={BioParentForm} />
 					<Route exact path="/sitter/sitterForm" component={BioSitterForm} />
-					<Route exact path="/parent/contactSitter" component={SitterContactForm} />
-					<Route exact path="/sitter/contactParent" component={ContactParentForm} />
+
 					{/* Catch all unmatched routes */}
 					<Route component={NotFound} />
 				</Switch>

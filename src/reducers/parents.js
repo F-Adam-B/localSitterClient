@@ -13,22 +13,6 @@ const initialState = {
 
 const parentsReducer = (state = initialState, action) => {
 	switch (action.type) {
-		case types.ADD_MESSAGE_SUCCESS:
-			return Object.assign({}, state, {
-				loading: false,
-				error: false,
-				sentMessages: action.message,
-			});
-		case types.ADD_MESSAGE_REQUEST:
-			return Object.assign({}, state, {
-				loading: true,
-				error: false,
-			});
-		case types.ADD_MESSAGE_ERROR:
-			return Object.assign({}, state, {
-				loading: false,
-				error: action.error,
-			});
 		case types.FETCH_BIO_SUCCESS:
 			return Object.assign({}, state, {
 				loading: false,

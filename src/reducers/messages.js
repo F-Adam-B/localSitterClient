@@ -5,7 +5,7 @@ const initialState = {
 	error: null,
 	sentMessages: [],
 	receivedMessages: [],
-	openContactForm: false,
+	openContactForm: null,
 	recipientEmail: '',
 };
 
@@ -17,13 +17,23 @@ const messagesReducer = (state = initialState, action) => {
 			});
 		case types.TOGGLE_CONTACT_FORM:
 			return Object.assign({}, state, {
-				openContactForm: true,
+				openContactForm: action.boolean,
 			});
 		case types.ADD_MESSAGE_SUCCESS:
 			return Object.assign({}, state, {
 				loading: false,
 				error: false,
 				sentMessages: action.message,
+			});
+		case types.ADD_MESSAGE_REQUEST:
+			return Object.assign({}, state, {
+				loading: true,
+				error: false,
+			});
+		case types.ADD_MESSAGE_ERROR:
+			return Object.assign({}, state, {
+				loading: false,
+				error: action.error,
 			});
 		default:
 			break;
