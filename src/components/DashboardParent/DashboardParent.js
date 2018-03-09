@@ -17,9 +17,14 @@ export class DashboardParent extends Component {
 		this.props.dispatch(searchSitters(this.props.location));
 	}
 
-	toggleContactForm() {
+	recipientEmail = email => {
+		this.props.dispatch(actions.storeRecipientEmail(email));
 		this.props.dispatch(actions.toggleContactForm());
-	}
+	};
+
+	// toggleContactForm() {
+	// 	this.props.dispatch(actions.toggleContactForm());
+	// }
 
 	render() {
 		if (this.props.createdBios.length === 0) {
@@ -69,7 +74,13 @@ export class DashboardParent extends Component {
 						<b>Years Experience:</b> {item.yearsExperience}
 					</li>
 				</ul>
-				<button className="contactSitterButton" type="submit" onClick={() => this.toggleContactForm()}>
+				<button
+					className="contactSitterButton"
+					type="submit"
+					onClick={() => {
+						this.recipientEmail(item.sitterUserID.email);
+					}}
+				>
 					Contact Sitter
 				</button>
 			</div>
@@ -90,7 +101,6 @@ export class DashboardParent extends Component {
 
 const mapStateToProps = state => ({
 	userId: state.auth.currentUser.id,
-	userName: state.auth.currentUser.firstName,
 	createdBios: state.parents.parentalInfo,
 	location: state.auth.currentUser.zipcode,
 	localSitters: state.sitters.zipcodeSearches,
