@@ -12,7 +12,7 @@ class SitterContactForm extends Component {
 			text: this.contactSitterTextInput.value,
 			id: this.props.id,
 		};
-		console.log('value: ', value);
+
 		this.props.dispatch(addMessageSuccess(value));
 		this.contactSitterSubjectInput.value = '';
 		this.contactSitterTextInput.value = '';
@@ -36,7 +36,7 @@ class SitterContactForm extends Component {
 							name="contactSubjectInput"
 							id="contactSubjectInput"
 							placeholder="Subject"
-							// onChange={e => console.log(e.target.value)}
+							// onChange={e => }
 							ref={input => (this.contactSitterSubjectInput = input)}
 						/>
 					</div>
@@ -45,7 +45,7 @@ class SitterContactForm extends Component {
 							className="textArea"
 							type="text"
 							placeholder="Enter a message"
-							// onChange={e => console.log(e.target.value)}
+							// onChange={e => }
 							ref={input => (this.contactSitterTextInput = input)}
 						/>
 					</div>

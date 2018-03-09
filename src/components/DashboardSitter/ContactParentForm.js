@@ -12,7 +12,7 @@ class ContactParentForm extends Component {
 			text: this.contactParentTextInput.value,
 			id: this.props.id,
 		};
-		console.log('value: ', value);
+
 		this.props.dispatch(addMessageSuccess(value));
 		this.contactParentSubjectInput.value = '';
 		this.contactParentTextInput.value = '';

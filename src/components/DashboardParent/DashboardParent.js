@@ -6,6 +6,7 @@ import Moment from 'react-moment';
 import * as actions from '../../actions';
 import { searchSitters } from '../../actions/sitters';
 import BioParentForm from '../BioParent/BioParentForm';
+import SitterContactForm from './SitterContactForm';
 
 import './DashboardParent.css';
 
@@ -16,6 +17,10 @@ export class DashboardParent extends Component {
 		this.props.dispatch(searchSitters(this.props.location));
 	}
 
+	toggleContactForm() {
+		this.props.dispatch(actions.toggleContactForm());
+	}
+
 	render() {
 		if (this.props.createdBios.length === 0) {
 			return (
@@ -24,6 +29,15 @@ export class DashboardParent extends Component {
 				</div>
 			);
 		}
+
+		if (this.props.openContactForm === true) {
+			return (
+				<div className="contactForm">
+					<SitterContactForm />
+				</div>
+			);
+		}
+
 		let localSitterList;
 		localSitterList = this.props.localSitters.map((item, index) => (
 			<div key={index}>
@@ -55,9 +69,9 @@ export class DashboardParent extends Component {
 						<b>Years Experience:</b> {item.yearsExperience}
 					</li>
 				</ul>
-				<a className="contactSitterButton" href="#">
-					Contact Sitter /in dev/
-				</a>
+				<button className="contactSitterButton" type="submit" onClick={() => this.toggleContactForm()}>
+					Contact Sitter
+				</button>
 			</div>
 		));
 		return (
@@ -80,6 +94,7 @@ const mapStateToProps = state => ({
 	createdBios: state.parents.parentalInfo,
 	location: state.auth.currentUser.zipcode,
 	localSitters: state.sitters.zipcodeSearches,
+	openContactForm: state.messages.openContactForm,
 });
 
 export default connect(mapStateToProps)(DashboardParent);

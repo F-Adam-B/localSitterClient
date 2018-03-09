@@ -5,6 +5,7 @@ import Moment from 'react-moment';
 
 import * as actions from '../../actions';
 import BioSitterForm from '../BioSitter/BioSitterForm';
+import ContactParentForm from './ContactParentForm';
 import { searchParents } from '../../actions/parents';
 import { fetchEnrolledSitterBio } from '../../actions/sitters';
 
@@ -17,6 +18,15 @@ export class DashboardSitter extends Component {
 		this.props.dispatch(searchParents(this.props.location));
 	}
 
+	recipientEmail = email => {
+		this.props.dispatch(actions.storeRecipientEmail(email));
+		this.props.dispatch(actions.toggleContactForm());
+	};
+
+	// toggleContactForm() {
+	// 	this.props.dispatch(actions.toggleContactForm());
+	// }
+
 	render() {
 		if (this.props.createdBios.length === 0) {
 			return (
@@ -25,6 +35,15 @@ export class DashboardSitter extends Component {
 				</div>
 			);
 		}
+
+		if (this.props.openContactForm === true) {
+			return (
+				<div className="contactForm">
+					<ContactParentForm />
+				</div>
+			);
+		}
+
 		let localParentList;
 		localParentList = this.props.localParents.map((item, index) => (
 			<div className="sitterDashParentResultFields" key={index}>
@@ -54,9 +73,18 @@ export class DashboardSitter extends Component {
 						<br /> {item.additionalInfo}
 					</li>
 				</ul>
-				<a className="contactParentButton" href="#">
-					Contact Parent
-				</a>
+				<div className="contactParentButtonWrapper">
+					<button
+						className="contactParentButton"
+						type="submit"
+						onClick={() => {
+							this.recipientEmail(item.parentUserID.email);
+							console.log(item.parentUserID.email);
+						}}
+					>
+						Contact Parent
+					</button>
+				</div>
 			</div>
 		));
 		return (
@@ -75,10 +103,11 @@ export class DashboardSitter extends Component {
 
 const mapStateToProps = state => ({
 	userId: state.auth.currentUser.id,
-	userName: state.auth.currentUser.firstName,
+	// email: state.parents.zipcodeSearches.parentUserID.email,
 	createdBios: state.sitters.sitterBio,
 	location: state.auth.currentUser.zipcode,
 	localParents: state.parents.zipcodeSearches,
+	openContactForm: state.messages.openContactForm,
 });
 
 export default connect(mapStateToProps)(DashboardSitter);
