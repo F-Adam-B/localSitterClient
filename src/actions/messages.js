@@ -27,6 +27,19 @@ export const storeRecipientEmail = email => ({
 	email,
 });
 
+export const fetchMessagesRequest = () => ({
+	type: types.FETCH_MESSAGES_REQUEST,
+});
+
+export const fetchMessagesError = error => ({
+	type: types.FETCH_MESSAGES_ERROR,
+	error,
+});
+
+export const fetchMessagesSuccess = messages => ({
+	type: types.FETCH_MESSAGES_SUCCESS,
+	messages,
+});
 // async actions
 
 export const createMessage = data => (dispatch, getState) => {
@@ -41,8 +54,26 @@ export const createMessage = data => (dispatch, getState) => {
 	})
 		.then(res => normalizeResponseErrors(res))
 		.then(res => res.json())
+		.then(res => dispatch(fetchMessageByUser(res)))
+		.catch(err => {
+			dispatch(addMessageError(err));
+		});
+};
+
+export const fetchMessageByUser = data => (dispatch, getState) => {
+	dispatch(fetchMessagesRequest());
+	return fetch(`${API_BASE_URL}/messages/${data.sender}`, {
+		method: 'GET',
+		headers: {
+			'Content-Type': 'application/json',
+			Accept: 'application/json',
+		},
+	})
+		.then(res => normalizeResponseErrors(res))
+		.then(res => res.json())
 		.then(res => dispatch(addMessageSuccess(res)))
 		.catch(err => {
-			dispatch(addMessageRequest(err));
+			console.log('err: ', err);
+			dispatch(fetchMessagesError(err));
 		});
 };

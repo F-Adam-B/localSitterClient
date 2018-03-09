@@ -11,6 +11,16 @@ const initialState = {
 
 const messagesReducer = (state = initialState, action) => {
 	switch (action.type) {
+		case types.FETCH_MESSAGES_REQUEST:
+			return Object.assign({}, state, {
+				loading: true,
+				error: false,
+			});
+		case types.FETCH_MESSAGES_ERROR:
+			return Object.assign({}, state, {
+				loading: false,
+				error: true,
+			});
 		case types.STORE_RECIPIENT_EMAIL:
 			return Object.assign({}, state, {
 				recipientEmail: action.email,
