@@ -7,7 +7,7 @@ import * as actions from '../../actions';
 
 import { searchSitters } from '../../actions/sitters';
 import BioParentForm from '../BioParent/BioParentForm';
-import ContactForm from '../ContactForm';
+import ContactForm from '../Messages/ContactForm';
 
 import './DashboardParent.css';
 

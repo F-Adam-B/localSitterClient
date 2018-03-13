@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import './ContactForm.css';
-import * as actions from '../actions';
-import { addMessageSuccess, createMessage } from '../actions/messages';
+import * as actions from '../../actions';
+import { addMessageSuccess, createMessage } from '../../actions/messages';
 
 class ContactForm extends Component {
 	handleClick() {
@@ -15,7 +15,7 @@ class ContactForm extends Component {
 		const value = {
 			subject: this.contactSitterSubjectInput.value,
 			text: this.contactSitterTextInput.value,
-			id: this.props.id,
+			userId: this.props.userId,
 			email: this.props.recipientEmail,
 		};
 
@@ -78,7 +78,7 @@ class ContactForm extends Component {
 
 const mapStateToProps = state => ({
 	parentName: state.auth.currentUser.firstName,
-	id: state.auth.currentUser.id,
+	userId: state.auth.currentUser.id,
 	recipientEmail: state.messages.recipientEmail,
 });
 

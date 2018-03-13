@@ -43,6 +43,7 @@ export const fetchMessagesSuccess = messages => ({
 // async actions
 
 export const createMessage = data => (dispatch, getState) => {
+	let userId = { userId: data.userId };
 	dispatch(addMessageRequest());
 	return fetch(`${API_BASE_URL}/messages/create_message`, {
 		method: 'POST',
@@ -54,7 +55,7 @@ export const createMessage = data => (dispatch, getState) => {
 	})
 		.then(res => normalizeResponseErrors(res))
 		.then(res => res.json())
-		.then(res => dispatch(fetchMessageByUser(res)))
+		.then(res => dispatch(fetchMessageByUser(userId)))
 		.catch(err => {
 			dispatch(addMessageError(err));
 		});
@@ -62,7 +63,7 @@ export const createMessage = data => (dispatch, getState) => {
 
 export const fetchMessageByUser = data => (dispatch, getState) => {
 	dispatch(fetchMessagesRequest());
-	return fetch(`${API_BASE_URL}/messages/${data.sender}`, {
+	return fetch(`${API_BASE_URL}/messages/${data.userId}`, {
 		method: 'GET',
 		headers: {
 			'Content-Type': 'application/json',
@@ -73,7 +74,6 @@ export const fetchMessageByUser = data => (dispatch, getState) => {
 		.then(res => res.json())
 		.then(res => dispatch(addMessageSuccess(res)))
 		.catch(err => {
-			console.log('err: ', err);
 			dispatch(fetchMessagesError(err));
 		});
 };

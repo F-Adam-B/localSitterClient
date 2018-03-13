@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Moment from 'react-moment';
 
 import * as actions from '../../actions';
-import ContactForm from '../ContactForm';
+import ContactForm from '../Messages/ContactForm';
 import BioSitterForm from '../BioSitter/BioSitterForm';
 import { searchParents } from '../../actions/parents';
 import { fetchEnrolledSitterBio } from '../../actions/sitters';

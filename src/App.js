@@ -9,7 +9,7 @@ import BioParentForm from './components/BioParent/BioParentForm';
 import BioSitterForm from './components/BioSitter/BioSitterForm';
 import DashboardParent from './components/DashboardParent/DashboardParent';
 import DashboardSitter from './components/DashboardSitter/DashboardSitter';
-import Inbox from './components/Inbox';
+import InboxList from './components/Messages/InboxList';
 
 import NotFound from './components/NotFound';
 import './index.css';
@@ -27,7 +27,7 @@ export class App extends Component {
 					<Route exact path="/sitter/dashboard" component={DashboardSitter} />
 					<Route exact path="/parent/parentForm" component={BioParentForm} />
 					<Route exact path="/sitter/sitterForm" component={BioSitterForm} />
-					<Route exact path="/inbox" component={Inbox} />
+					<Route exact path="/inbox" component={InboxList} />
 					{/* Catch all unmatched routes */}
 					<Route component={NotFound} />
 				</Switch>

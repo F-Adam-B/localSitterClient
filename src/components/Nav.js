@@ -14,6 +14,12 @@ export class Nav extends Component {
 		clearAuthToken();
 	}
 
+	handleClick() {
+		const value = { userId: this.props.userId };
+
+		this.props.dispatch(actions.fetchMessageByUser(value));
+	}
+
 	render() {
 		let landingPageTabs, parentTabs, sitterTabs, logoutTab;
 
@@ -63,8 +69,14 @@ export class Nav extends Component {
 						<Link to="/parent/dashboard" className="nav-bttn">
 							<button className="nav-bttn btn">Dashboard</button>
 						</Link>
-						<Link to="/parent/notifications" className="nav-bttn">
-							<button className="nav-bttn btn">Inbox</button>
+						<Link to="/inbox" className="nav-bttn">
+							<button
+								type="submit"
+								onClick={() => this.handleClick()}
+								className="nav-bttn inboxButton btn"
+							>
+								Inbox
+							</button>
 						</Link>
 					</div>
 				</div>
@@ -78,8 +90,14 @@ export class Nav extends Component {
 						<Link to="/sitter/dashboard" className="nav-bttn">
 							<button className="nav-bttn sitter-dashboard btn">Dashboard</button>
 						</Link>
-						<Link to="/sitter/dashboard" className="nav-bttn">
-							<button className="nav-bttn sitter-notifications btn">Inbox</button>
+						<Link to="/inbox" className="nav-bttn">
+							<button
+								type="submit"
+								onClick={() => this.handleClick()}
+								className="nav-bttn inboxButton btn"
+							>
+								Inbox
+							</button>
 						</Link>
 					</div>
 				</div>
@@ -115,7 +133,7 @@ export class Nav extends Component {
 
 const mapStateToProps = state => ({
 	currentView: state.view.selectedView,
-	// alertID: state.alert.userPanic[0] ? state.alert.userPanic[0]._id : 0,
+	userId: state.auth.currentUser.id,
 });
 
 export default connect(mapStateToProps)(Nav);
