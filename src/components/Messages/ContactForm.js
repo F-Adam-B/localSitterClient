@@ -68,7 +68,7 @@ class ContactForm extends Component {
 						<input type="checkbox" name="emailCheckBox" id="emailCheckBox" value="on" />
 					</div>
 					<div type="button" className="submitButton">
-						<button className="btn">Send</button>
+						<button className="btn contactSendBtn">Send</button>
 					</div>
 				</form>
 			</div>

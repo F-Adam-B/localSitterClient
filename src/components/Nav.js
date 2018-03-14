@@ -123,9 +123,9 @@ export class Nav extends Component {
 				</Link>
 				<span className="sitter-finder">Sitter Finder</span>
 				{landingPageTabs}
-				{parentTabs}
-				{sitterTabs}
-				{logoutTab}
+				<div className="parentTabs">{parentTabs}</div>
+				<div className="sitterTabs>">{sitterTabs}</div>
+				<div className="logoutTab">{logoutTab}</div>
 			</div>
 		);
 	}

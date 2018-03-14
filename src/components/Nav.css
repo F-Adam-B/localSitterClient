@@ -136,20 +136,20 @@ a {
 
 @media only screen and (min-width: 1020px) {
 	.sitter-finder {
-		padding-left: 7%;
+		margin: auto;
 		font-size: 45px;
-		padding-top: 42px;
 		margin-top: 17px;
 	}
 	.nav-button {
 		margin-top: 78px;
 		width: 100px;
 		display: flex;
+		padding-right: 73px;
 	}
 
 	.logout {
-		width: 79px;
-		margin-left: 90px;
+		width: 80px;
+		margin-top: 70px;
 	}
 	.log-out-tabs {
 		position: static;
@@ -168,8 +168,6 @@ a {
 		width: 81px;
 	}
 	.nav-button-container {
-		position: absolute;
-		width: 300px;
 	}
 
 	.nav-bttn logoutbtn {
@@ -184,8 +182,6 @@ a {
 @media only screen and (min-width: 1200px) {
 	.nav-bar {
 		justify-content: center;
-		padding-right: 30px;
-		padding-left: 30px;
 	}
 	.sitter-finder {
 		padding-left: 0%;

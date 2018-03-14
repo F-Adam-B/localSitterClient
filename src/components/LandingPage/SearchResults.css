@@ -51,6 +51,7 @@
 	.sitterResultList {
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: center;
 	}
 	.individualSitter {
 		margin-right: 10px;

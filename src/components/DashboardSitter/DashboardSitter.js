@@ -44,35 +44,34 @@ export class DashboardSitter extends Component {
 
 		localParentList = this.props.localParents.map((item, index) => (
 			<div className="sitterDashParentResultFields" key={index}>
-				<ul className="sitterDashParentsResultsUl">
-					<li className="parentFirstName sitterDashParentResult">
+				<div className="sitterDashParentsResultsUl">
+					<div className="parentFirstName sitterDashParentResult">
 						<b>Name:</b> {item.parentUserID.firstName}
-					</li>
-					<li className="parentLocation sitterDashParentResult">
+					</div>
+					<div className="parentLocation sitterDashParentResult">
 						<b>Location:</b> {item.location}
-					</li>
-					<li className="ageOfChild sitterDashParentResult">
+					</div>
+					<div className="ageOfChild sitterDashParentResult">
 						<b>Child Age:</b> {item.ageOfChild}
-					</li>
+					</div>{' '}
+					<b>Date Needed: </b>
 					<Moment className="dateNeeded sitterDashParentResult" format="MM/DD/YYYY">
-						<li>
-							<b>Date Needed:</b> {item.dateNeeded}
-						</li>
+						<div>{item.dateNeeded}</div>
 					</Moment>
-					<li className="startTime sitterDashParentResult">
+					<div className="startTime sitterDashParentResult">
 						<b>Start Time:</b> {item.startTime}
-					</li>
-					<li className="endTime sitterDashParentResult">
+					</div>
+					<div className="endTime sitterDashParentResult">
 						<b>End Time:</b> {item.endTime}
-					</li>
-					<li className="additionalInfo sitterDashParentResult">
+					</div>
+					<div className="additionalInfo sitterDashParentResult">
 						<b>Additional Info:</b>
 						<br /> {item.additionalInfo}
-					</li>
-				</ul>
+					</div>
+				</div>
 				<div className="contactParentButtonWrapper">
 					<button
-						className="contactParentButton"
+						className="contactParentButton btn"
 						type="submit"
 						onClick={() => {
 							this.recipientEmail(item.parentUserID.email);
