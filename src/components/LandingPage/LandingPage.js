@@ -39,37 +39,35 @@ export class LandingPage extends Component {
 					<div className="imgWrapper">
 						<img
 							className="babysitterImg"
-							src={'https://i.imgur.com/5co1gtF.jpg'}
+							src={'https://i.imgur.com/wsLXmSM.jpg'}
 							alt="babysitter-playing-with-child"
 						/>
 					</div>
 					<div className="descriptionWrapper">
 						<div className="description">
-							Sitter Finder's mission is to make child care more affordable and accessable to parents. The
-							technology we're building simplifies the process of finding a baby sitter for a special
-							occasion or if needed on a regular schedule. The technology will also allow parents to
-							search for certified sitters based on location.
+							Sitter Finder's mission is to make child care more affordable and accessable to parents by
+							connecting local families with local sitters.
 						</div>
-						<div className="searchForm">
-							<form className="zipCodeForm" onSubmit={e => this.handleSearch(e)}>
-								<legend className="searchNearYou">Search for a Sitter Near You</legend>
-								<div>
-									<input
-										className="searchSitterByZipInput"
-										id="zipInput"
-										name="zipInput"
-										type="text"
-										placeholder="Enter Zip Code"
-										ref={input => (this.input = input)}
-									/>
-									<br />
-									<p className="zipcodeDemoText">**Demo with zipcode 80204**</p>
-									<button className="searchButton btn" type="submit">
-										Search
-									</button>
-								</div>
-							</form>
-						</div>
+					</div>
+					<div className="searchForm">
+						<form className="zipCodeForm" onSubmit={e => this.handleSearch(e)}>
+							<legend className="searchNearYou">Search for a Sitter Near You</legend>
+							<div>
+								<input
+									className="searchSitterByZipInput"
+									id="zipInput"
+									name="zipInput"
+									type="text"
+									placeholder="Enter Zip Code"
+									ref={input => (this.input = input)}
+								/>
+								<br />
+								<p className="zipcodeDemoText">**Demo with zipcode 80204**</p>
+								<button className="searchButton btn" type="submit">
+									Search
+								</button>
+							</div>
+						</form>
 					</div>
 				</div>
 				<SearchResults />

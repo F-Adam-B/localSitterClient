@@ -14,26 +14,33 @@ export class SearchResults extends Component {
 
 		sitterList = this.props.result.map((item, index) => {
 			return (
-				<div key={index}>
-					<ul className="landingSitterResults">
-						<li className="sitterFirstName">
+				<div key={index} className="mediaBody">
+					<div className="landingSitterResults">
+						<div className="sitterFirstName">
 							<b>Name:</b> {item.sitterUserID.firstName}
-						</li>
-						<li className="sitterLocation">
+						</div>
+						<div className="sitterLocation">
 							<b>Location:</b> {item.location}
-						</li>
+						</div>
 						{/* <Moment className="availability" format='MM/DD/YYYY'><li className="dateAvailable">Date Available: {item.dateAvailable}</li></Moment > */}
-						<li className="sitterRate">
+						<div className="sitterRate">
 							<b>Rate:</b> {item.rate}{' '}
-						</li>
-						<li className="yearsExperience">
+						</div>
+						<div className="yearsExperience">
 							<b>Years Experience:</b> {item.yearsExperience}
-						</li>
-						<li className="sitterHeader">
+						</div>
+						<div className="stars">
+							<span class="fa fa-star checked" />
+							<span class="fa fa-star checked" />
+							<span class="fa fa-star checked" />
+							<span class="fa fa-star checked" />
+							<span class="fa fa-star" />
+						</div>
+						<div className="sitterHeader">
 							<b>{item.sitterHeader}</b>
-						</li>
-						<li className="individualSitter">{item.bio}</li>
-					</ul>
+						</div>
+						<div className="individualSitter">{item.bio}</div>
+					</div>
 					<p className="contactSitterLink">
 						<Link className="sign-up-link" to={'/signup'}>
 							<span className="sign-up-to-contact">Sign Up to Contact Sitter</span>
@@ -46,7 +53,7 @@ export class SearchResults extends Component {
 		if (this.props.result.length === 0 && this.props.initialSearch) {
 			resultHeader = <p className="noResultsFound">No sitters found in your area</p>;
 		} else if (this.props.result.length > 0) {
-			resultHeader = <h3>Sitters Near You:</h3>;
+			resultHeader = <h3 className="sitterNearYouHeader">~ Sitters Available Near You ~</h3>;
 		}
 
 		return (

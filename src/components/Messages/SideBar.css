@@ -1,5 +1,24 @@
-.sideBarHeader,
 .messageBoxesLi {
 	height: 100px;
 	width: 200px;
+}
+
+.sideBarHeader {
+	height: 50px;
+	width: 200px;
+}
+
+.messageBoxesLi {
+	box-shadow: 0 0px 20px rgba(51, 51, 51, 0.2);
+}
+
+.sideBarComponentWrapper,
+.sideBarWrapper {
+	width: 300px;
+}
+
+.sideBarComponentWrapper {
+	display: flex;
+	justify-content: center;
+	max-width: 200px;
 }

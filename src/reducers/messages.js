@@ -45,6 +45,11 @@ const messagesReducer = (state = initialState, action) => {
 				loading: false,
 				error: action.error,
 			});
+		case types.ADD_RECEIVED_MESSAGE_SUCCESS:
+			return Object.assign({}, state, {
+				loading: false,
+				message: action.message,
+			});
 		default:
 			break;
 	}

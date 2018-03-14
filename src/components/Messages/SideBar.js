@@ -10,7 +10,7 @@ class SideBar extends Component {
 	render() {
 		return (
 			<div className="sideBarwrapper">
-				<div className="sideBarHeader">Inbox</div>
+				<div className="sideBarHeader">Messages</div>
 				<div className="messageBoxes">
 					<ul className="messageBoxesUl">
 						<li

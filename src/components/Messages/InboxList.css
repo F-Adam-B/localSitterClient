@@ -1,0 +1,11 @@
+.receivedMessagesWrapper,
+.sentMessagesWrapper {
+	display: flex;
+	box-shadow: 0 4px 20px rgba(51, 51, 51, 0.2);
+	max-width: 80%;
+	margin: auto;
+}
+
+.sideBarComponentWrapper {
+	box-shadow: 0 4px 20px rgba(51, 51, 51, 0.2);
+}

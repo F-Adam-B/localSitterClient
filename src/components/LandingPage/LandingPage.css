@@ -1,13 +1,11 @@
 .imgWrapper {
-	height: 150px;
-	margin-bottom: 20px;
-	margin-right: 10px;
-	margin-left: 10px;
+	background-size: cover;
+	/* background: url(https://i.imgur.com/wsLXmSM.jpg) center center; */
 }
 
 .babysitterImg {
 	width: 100%;
-	height: 150px;
+	height: 225px;
 }
 
 .description {
@@ -45,7 +43,7 @@
 
 @media only screen and (min-width: 562px) {
 	.babysitterImg {
-		max-width: 450px;
+		height: 300px;
 	}
 	.description {
 		text-align: center;
@@ -63,20 +61,39 @@
 @media only screen and (min-width: 1200px) {
 	.Site-Content {
 		display: flex;
-		margin-top: 100px;
+		flex-direction: column;
+		/* margin-top: 100px; */
 	}
 	.imgWrapper {
-		max-width: 50%;
+		/* max-width: 50%;
 		margin-left: 10%;
 		width: 600px;
-		height: 200px;
+		height: 200px; */
+		text-align: center;
+		width: 100%;
+		height: 265px;
 	}
 	.babysitterImg {
-		max-width: 600px !important;
-		height: 200px;
+		/* max-width: 600px !important; */
+		height: 500px;
+		max-width: 100%;
 	}
 	.descriptionWrapper {
-		max-width: 50%;
+		position: absolute;
 		font-size: 25px;
+	}
+
+	.description {
+		color: whitesmoke;
+		margin-left: 62%;
+		text-align: left;
+		margin-top: 5%;
+	}
+
+	.sitterResultHeader {
+	}
+	.searchForm {
+		position: unset;
+		margin-top: 290px;
 	}
 }

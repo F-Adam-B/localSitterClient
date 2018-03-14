@@ -41,6 +41,7 @@ export class DashboardSitter extends Component {
 		}
 
 		let localParentList;
+
 		localParentList = this.props.localParents.map((item, index) => (
 			<div className="sitterDashParentResultFields" key={index}>
 				<ul className="sitterDashParentsResultsUl">

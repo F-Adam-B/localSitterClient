@@ -10,7 +10,7 @@ class MessageDetail extends Component {
 			// console.log('object: ', object.messages.message)
 			<div className="messageSectionWrapper" key={object.messages.date}>
 				<div className="messageSubjectWrapper">{object.messages.subject}</div>
-				<div className="messageBody">{object.messages.message}</div>
+				{/* <div className="messageBody">{object.messages.message}</div> */}
 				<Moment format="MM/DD/YYYY">
 					<div className="messageTimeStamp">{object.messages.date}</div>
 				</Moment>

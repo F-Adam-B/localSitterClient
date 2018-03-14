@@ -17,6 +17,11 @@ export const addMessageSuccess = message => ({
 	message,
 });
 
+export const addReceivedMessageSuccess = message => ({
+	type: types.ADD_RECEIVED_MESSAGE_SUCCESS,
+	message,
+});
+
 export const toggleContactForm = boolean => ({
 	type: types.TOGGLE_CONTACT_FORM,
 	boolean,
@@ -73,6 +78,23 @@ export const fetchMessageByUser = data => (dispatch, getState) => {
 		.then(res => normalizeResponseErrors(res))
 		.then(res => res.json())
 		.then(res => dispatch(addMessageSuccess(res)))
+		.catch(err => {
+			dispatch(fetchMessagesError(err));
+		});
+};
+
+export const fetchMessageByUserAndMessage = data => (dispatch, getState) => {
+	dispatch(fetchMessagesRequest());
+	return fetch(`${API_BASE_URL}/messages/${data.userId}/${data._id}`, {
+		method: 'GET',
+		headers: {
+			'Content-Type': 'application/json',
+			Accept: 'application/json',
+		},
+	})
+		.then(res => normalizeResponseErrors(res))
+		.then(res => res.json())
+		.then(res => dispatch(addReceivedMessageSuccess(res)))
 		.catch(err => {
 			dispatch(fetchMessagesError(err));
 		});

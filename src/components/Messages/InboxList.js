@@ -19,46 +19,51 @@ class InboxList extends Component {
 	renderReceivedMessages() {
 		return this.props.receivedMessagesBox.map(data => <MessageDetail key={data._id} message={data} />);
 	}
+
+	renderContent() {
+		switch (this.props.currentView) {
+			case 'sentMessages':
+				return (
+					<div className="sentMessagesWrapper">
+						<div className="sideBarComponentWrapper">
+							<SideBar />
+						</div>
+						<ul>
+							<li
+								className="renderedSentMessages"
+								onClick={() => {
+									console.log('click');
+								}}
+							>
+								<span>Sent</span>
+								{this.renderSentMessages()}
+							</li>
+						</ul>
+					</div>
+				);
+			case 'receivedMessages':
+				return (
+					<div className="receivedMessagesWrapper">
+						<div className="sideBarComponentWrapper">
+							<SideBar />
+						</div>
+						<ul>
+							<li
+								className="renderedReceivedMessages"
+								onClick={() => {
+									console.log('click');
+								}}
+							>
+								<span>Received</span>
+								{this.renderReceivedMessages()}
+							</li>
+						</ul>
+					</div>
+				);
+		}
+	}
 	render() {
-		let sentMessages, receivedMessages;
-		if (this.props.currentView === 'sentMessages') {
-			sentMessages = (
-				<div className="sentMessagesWrapper">
-					<SideBar />
-					<ul>
-						<li
-							onClick={() => {
-								console.log('click');
-							}}
-						>
-							{this.renderSentMessages()}
-						</li>
-					</ul>
-				</div>
-			);
-		}
-		if (this.props.currentView === 'receivedMessages') {
-			receivedMessages = (
-				<div className="receivedMessagesWrapper">
-					<SideBar />
-					<ul>
-						<li
-							onClick={() => {
-								console.log('click');
-							}}
-						>
-							{this.renderReceivedMessages()}
-						</li>
-					</ul>
-				</div>
-			);
-		}
-		return (
-			<div className="inboxListWrapper">
-				{sentMessages}
-				{receivedMessages}
-			</div>
-		);
+		return <div className="inboxListWrapper">{this.renderContent()}</div>;
 	}
 }
 

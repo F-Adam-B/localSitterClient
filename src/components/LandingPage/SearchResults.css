@@ -3,7 +3,6 @@
 }
 
 .sitterResultHeader {
-	display: flex;
 	align-items: center;
 }
 
@@ -27,6 +26,27 @@
 	margin-left: 5px;
 }
 
+.sign-up-to-contact:hover {
+	color: green !important;
+}
+
+.checked {
+	color: orange;
+}
+
+.sitterNearYouHeader {
+	border-bottom: black 1px solid;
+}
+
+.availableNowHeader {
+	padding-bottom: 10px;
+}
+
+.mediaBody,
+.landingSitterResults {
+	overflow: hidden;
+}
+
 @media only screen and (min-width: 600px) {
 	.sitterResultList {
 		display: flex;
@@ -46,8 +66,13 @@
 	.sitterResultList {
 		display: flex;
 		justify-content: space-evenly;
+		flex-direction: column;
+		width: 60%;
 	}
 	.individualSitter {
-		max-width: 200px;
+		max-width: 100%;
+	}
+	.landingSitterResults {
+		max-width: 100%;
 	}
 }
