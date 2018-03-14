@@ -1,5 +1,5 @@
 .contactSitterButton {
-	color: blue !important;
+	color: whitesmoke;
 }
 .parentDashSitters {
 	margin-bottom: 15px;
@@ -9,9 +9,29 @@
 	text-align: center;
 }
 
+.welcomeDashHeader {
+	margin-top: 10px;
+}
+
 @media only screen and (min-width: 600px) {
 	.parentDashSitters {
 		display: flex;
 		flex-wrap: wrap;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.sitterResultList {
+		display: flex;
+		justify-content: space-evenly;
+		flex-direction: column;
+		width: 60%;
+		margin-left: 20%;
+	}
+	.individualSitter {
+		max-width: 100%;
+	}
+	.landingSitterResults {
+		max-width: 100%;
 	}
 }

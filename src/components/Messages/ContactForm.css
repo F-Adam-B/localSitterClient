@@ -14,4 +14,9 @@
 
 .exitContactForm {
 	float: right;
+	margin-right: 30%;
+}
+
+.contactSubject {
+	padding-left: 290px;
 }

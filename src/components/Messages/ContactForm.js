@@ -29,7 +29,7 @@ class ContactForm extends Component {
 		return (
 			<div className="sitterContactFormWrapper">
 				<div className="contactFormHeader">
-					<h1>Send a message to sitter....</h1>
+					<h1>Respond to sitter</h1>
 					<button
 						className="exitContactForm"
 						type="submit"
@@ -43,7 +43,7 @@ class ContactForm extends Component {
 				</div>
 				<form className="contactForm" onSubmit={e => this.onSubmit(e)}>
 					<div className="inputSubject">
-						<label className="contactSubject">Enter a subject</label>
+						<label className="contactSubject" />
 						<input
 							className="contactSubjectInput"
 							type="text"
@@ -68,7 +68,7 @@ class ContactForm extends Component {
 						<input type="checkbox" name="emailCheckBox" id="emailCheckBox" value="on" />
 					</div>
 					<div type="button" className="submitButton">
-						<button>Send</button>
+						<button className="btn">Send</button>
 					</div>
 				</form>
 			</div>
